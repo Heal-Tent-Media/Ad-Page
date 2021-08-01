@@ -11,6 +11,7 @@
             <div id="banner">
                 <img src="./images/amazon.svg" class="Logo" alt="Logo" width="400px" height="250px">
             </div>
+            <div class="company">
             <div id="company">
                 <h1>Company Name</h1>
                 <div class="description">
@@ -25,7 +26,7 @@
                 </div>
             </div>
             <div id="phone" >
-                <img src="./images/Phone.svg" alt="Phone" class="phone-bg" onclick="action()">
+                <img src="./images/phone.svg" alt="Phone" class="phone-bg" onclick="action()">
                 <div class="slide fade">
                     <img src='./images/Whatsapp/WhatsappBg.svg' alt="whatsapp" class="bg">
                     <img src="./images/Whatsapp/WhatsappVector.svg" alt="Logo" class="logo" id="whatsapp">
@@ -33,16 +34,16 @@
                     <img src='./images/Whatsapp/WhatsappBox.svg' alt="box" class="box" >
                 </div>
                 <div class="slide fade">
-                    <img src='./images/Email/EmailBg.svg' alt="whatsapp" class="bg">
+                    <img src='./images/Email/EmailBg.svg' alt="Email" class="bg">
                     <img src="./images/Email/EmailVector.svg" alt="Logo" class="logo" id="email">
-                    <img src='./images/Email/EmailText.svg' style="position: absolute;top:265px;left:150px;"
-                        alt="whatsapp" class="text">
+                    <img src='./images/Email/EmailText.svg' style="position: absolute;top:265px;left:160px;"
+                        alt="Email" class="text">
                     <img src='./images/Email/EmailBox.svg' alt="box" class="box"  >
                 </div>
                 <div class="slide fade">
-                    <img src='./images/Phone/PhoneBg.svg' alt="whatsapp" class="bg">
+                    <img src='./images/Phone/PhoneBg.svg' alt="Phone" class="bg">
                     <img src="./images/Phone/PhoneVector.svg" alt="Logo" class="logo" id="call">
-                    <img src='./images/Phone/PhoneText.svg' alt="whatsapp" class="text">
+                    <img src='./images/Phone/PhoneText.svg' alt="Phone" class="text">
                     <img src='./images/Phone/PhoneBox.svg' alt="box" style="top:410px;left:160px;" class="box" >
                 </div>
                 <div style="text-align:center">
@@ -51,6 +52,7 @@
                     <span class="dot" style="left:200px"></span>
                 </div>
             </div>
+        </div>
     </section>
     <script type="text/javascript">
         var slideIndex = 0;
@@ -73,7 +75,7 @@
             slides[slideIndex].style.display = "block";
             dots[slideIndex].className += " active";
             slideIndex++;
-            setTimeout(showSlides, 3000);
+            setTimeout(showSlides, 5000);
         }
         
         function action(){

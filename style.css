@@ -1,9 +1,14 @@
 section {
     width: 100%;
 }
+
+.Logo {
+    margin: 0% 5%;
+}
+
 #banner{
     background-color: #2A2A2A;
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 #company,#phone{
@@ -13,11 +18,14 @@ section {
 }
 
 #company{
+    height: 100%;
     width: 75%;
 }
 
 #phone{
+    height: 100%;
     width: 25%;
+    margin: -130px 0px;
 }
 
 .bg {
@@ -30,6 +38,7 @@ section {
     top:5px;
     left:20px;
     z-index: 1;
+    
 }
 .logo{
     position: absolute;
@@ -57,9 +66,9 @@ h1{
 }
 
 .description{
-    margin: 2% 5%;
+    margin: 0% 2%;
     text-align: left;
-    line-height: 200%;
+    line-height: 150%;
     font-size: x-large;
 }
 
@@ -103,9 +112,9 @@ h1{
 
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 2.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2.5s;
   }
   
   @-webkit-keyframes fade {
@@ -118,26 +127,52 @@ h1{
     to {opacity: 1}
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     #company,#phone{
-        float: none;
         position: relative;
+        vertical-align: middle;
+    }
+    #phone{
+        order:1;
+        margin: 0% 0%;
+        height: 550px;
+    }
+
+    .company{
+        display: flex;
+        flex-direction: column;
     }
     #company{
+        order:2;
         width: 100%;
     }
+    .Logo{
+        width: 150px;
+        height: 150px;
+    }
+
   }
 
-  @media only screen and (max-width: 1240px) and (min-width: 480px){
+  @media only screen and (max-width: 1240px) and (min-width: 600px){
     #company,#phone{
         float: none;
         position: relative;
     }
     #company{
         width: 100%;
+        height: 100%;
     }
     #phone{
         left: 50%;
         transform: translateX(-50%);
+        margin: 0% 0%;
     }
   }
+
+  @media (max-width: 320px){
+      #phone{
+        margin-left:-50px;
+      }
+  }
+
+  
