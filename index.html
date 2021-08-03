@@ -3,101 +3,62 @@
 <head>
     <link rel="stylesheet" href="./style.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    
 </head>
 
 <body>
     <section class="companySection">
-            <div id="banner">
-                <img src="./images/amazon.svg" class="Logo" alt="Logo" width="400px" height="250px">
-            </div>
-            <div class="company">
+        <div id="banner">
+            <img src="./images/amazon.svg" class="Logo" alt="Logo" width="400px" height="250px">
+        </div>
+        <div class="company">
             <div id="company">
                 <h1>Company Name</h1>
                 <div class="description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis vehicula massa, a egestas
-                        nulla egestas ut. Suspendisse aliquet ac nisl non convallis. Pellentesque et blandit neque. Praesent
+                        nulla egestas ut. Suspendisse aliquet ac nisl non convallis. Pellentesque et blandit neque.
+                        Praesent
                         mattis sapien ligula, et pellentesque lectus fermentum at. Fusce euismod consequat enim.
-                        Curabitur ac nulla consequat, dictum nisi vel, mattis arcu. Ut viverra gravida arcu dignissim efficitur.
+                        Curabitur ac nulla consequat, dictum nisi vel, mattis arcu. Ut viverra gravida arcu dignissim
+                        efficitur.
                         Quisque fringilla, purus eu commodo elementum, sapien sapien malesuada nunc, ac tincidunt tellus
                         risus quis felis. Cras elit sapien, faucibus sed dolor sed, commodo eleifend lectus. Sed aliquam
                         iaculis sapien, non molestie nisi imperdiet eget. Quisque faucibus ante massa, ac hendrerit elit
                         iaculis quis.</p>
                 </div>
+                <div class="socialMedia">
+                    <a href="https://facebook.com" target="_blank"><img src="images/socialMedia/Facebook.wine.svg" width="80px" height="80px"/></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="images/socialMedia/Twitter.wine.svg"  width="80px" height="80px"/></i></a>
+                    <a href="https://instagram.com/" target="_blank"><img src="images/socialMedia/Instagram.wine.svg"  width="80px" height="80px"/></i></a>
+                </div>
             </div>
-            <div id="phone" >
+            <div id="phone">
                 <img src="./images/Phone.svg" alt="Phone" class="phone-bg" onclick="action()">
                 <div class="slide fade">
                     <img src='./images/Whatsapp/WhatsappBg.svg' alt="whatsapp" class="bg">
                     <img src="./images/Whatsapp/WhatsappVector.svg" alt="Logo" class="logo" id="whatsapp">
                     <img src='./images/Whatsapp/WhatsappText.svg' alt="whatsapp" class="text">
-                    <img src='./images/Whatsapp/WhatsappBox.svg' alt="box" class="box" >
+                    <img src='./images/Whatsapp/WhatsappBox.svg' alt="box" class="box">
                 </div>
                 <div class="slide fade">
                     <img src='./images/Email/EmailBg.svg' alt="Email" class="bg">
                     <img src="./images/Email/EmailVector.svg" alt="Logo" class="logo" id="email">
-                    <img src='./images/Email/EmailText.svg' style="position: absolute;top:265px;left:150px;"
-                        alt="Email" class="text">
-                    <img src='./images/Email/EmailBox.svg' alt="box" class="box"  >
+                    <img src='./images/Email/EmailText.svg' id="emailText" alt="Email" class="text">
+                    <img src='./images/Email/EmailBox.svg' alt="box" class="box">
                 </div>
                 <div class="slide fade">
                     <img src='./images/Phone/PhoneBg.svg' alt="Phone" class="bg">
                     <img src="./images/Phone/PhoneVector.svg" alt="Logo" class="logo" id="call">
                     <img src='./images/Phone/PhoneText.svg' alt="Phone" class="text">
-                    <img src='./images/Phone/PhoneBox.svg' alt="box" style="top:410px;left:160px;" class="box" >
+                    <img src='./images/Phone/PhoneBox.svg' alt="box" id="phoneBox" class="box">
                 </div>
                 <div style="text-align:center">
-                    <span class="dot" ></span>
-                    <span class="dot" style="left:180px"></span>
-                    <span class="dot" style="left:200px"></span>
+                    <span class="dot" id="dot1"></span>
+                    <span class="dot" id="dot2"></span>
+                    <span class="dot" id="dot3"></span>
                 </div>
             </div>
         </div>
     </section>
-    <script type="text/javascript">
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var slides = document.getElementsByClassName("slide");
-            var dots = document.getElementsByClassName("dot");
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            //console.log(slides);
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
-            //console.log(slideIndex);
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("active", "");
-            }
-            slides[slideIndex].style.display = "block";
-            dots[slideIndex].className += " active";
-            slideIndex++;
-            setTimeout(showSlides, 5000);
-        }
-        
-        function action(){
-            if(slideIndex-1===0){
-                var number = "+918508663203"
-                var Message = "Hi"
-
-                var url = 'https://api.whatsapp.com/send?phone=' + number + '&text=%20' + Message;
-                window.open(url, '_blank')
-                //console.log("Whatsapp");
-            }
-            else if(slideIndex-1===1){
-                //console.log("Email");
-            }
-            else{
-                var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                if (isMobile) {
-                    document.location.href = "tel:+918508663203";
-                } 
-                //console.log("Phone");
-            }
-        }
-    
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>

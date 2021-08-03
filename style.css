@@ -1,3 +1,7 @@
+
+body{
+    font-family: '-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';
+}
 section {
     width: 100%;
 }
@@ -6,89 +10,101 @@ section {
     margin: 0% 5%;
 }
 
-#banner{
+#banner {
     background-color: #2A2A2A;
     text-align: left;
     width: 100%;
 }
-#company,#phone{
+
+#company,
+#phone {
     float: left;
     position: relative;
-    text-align: center;
 }
 
-#company{
+#company {
     height: 100%;
     width: 75%;
 }
 
-#phone{
+#phone {
     height: 100%;
     width: 25%;
     margin: -130px 0px;
 }
 
-.bg {
-    position: absolute;
-    top:0px;
-    left:15px;
-}
-.phone-bg{
-    position: absolute;
-    top:5px;
-    left:20px;
-    z-index: 1;
-    
-}
-.logo{
-    position: absolute;
-    top:165px;
-    left:150px;
-}
-.text{
-    position: absolute;
-    top:265px;
-    left:110px;
-}
-.box{
-    position: absolute;
-    top:410px;
-    left:90px;
-}
-.group{
-    position: absolute;
-    top:475px;
-    left:170px;
+.socialMedia{
+    margin: 0% 1%;
 }
 
-h1{
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+}
+
+.phone-bg {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    z-index: 1;
+
+}
+
+.logo {
+    position: absolute;
+    top: 165px;
+    left: 150px;
+}
+
+.text {
+    position: absolute;
+    top: 265px;
+    left: 110px;
+}
+
+.box {
+    position: absolute;
+    top: 410px;
+    left: 90px;
+}
+
+.group {
+    position: absolute;
+    top: 475px;
+    left: 170px;
+}
+
+h1 {
+    margin: 2% 2%;
     font-size: 50px;
 }
 
-.description{
+.description {
     margin: 0% 2%;
     text-align: left;
     line-height: 150%;
     font-size: x-large;
 }
 
-.prev, .next {
+.prev,
+.next {
     color: black;
     font-weight: bold;
-    font-size: 50px; 
+    font-size: 50px;
 }
 
-.next{
+.next {
     position: absolute;
-    top:200px;
-    left:340px;
+    top: 200px;
+    left: 340px;
     display: none;
 }
 
-.prev{
+.prev {
     position: absolute;
-    top:200px;
-    left:0px;
+    top: 200px;
+    left: 0px;
     display: none;
 }
 
@@ -102,9 +118,9 @@ h1{
     display: inline-block;
     position: absolute;
     top: 475px;
-    left:160px;
+    left: 160px;
     transition: background-color 0.6s ease;
-  }
+}
 
 .active {
     background-color: white;
@@ -115,64 +131,168 @@ h1{
     -webkit-animation-duration: 2.5s;
     animation-name: fade;
     animation-duration: 2.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+}
 
-  @media (max-width: 600px) {
-    #company,#phone{
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media (max-width: 600px) {
+
+    #company,
+    #phone {
         position: relative;
         vertical-align: middle;
     }
-    #phone{
-        order:1;
+
+    #phone {
+        order: 1;
         margin: 0% 0%;
         height: 550px;
     }
 
-    .company{
+    .company {
         display: flex;
         flex-direction: column;
     }
-    #company{
-        order:2;
+
+    #company {
+        order: 2;
         width: 100%;
     }
-    .Logo{
-        width: 150px;
+
+    .Logo {
+        width: 250px;
         height: 150px;
     }
 
-  }
+    .socialMedia img{
+        width: 50px;
+        height: 50px;
+    }
 
-  @media only screen and (max-width: 1240px) and (min-width: 600px){
-    #company,#phone{
+
+
+}
+
+@media only screen and (max-width: 1240px) and (min-width: 600px) {
+
+    #company,
+    #phone {
         float: none;
         position: relative;
     }
-    #company{
+
+    .company {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #company {
+        order: 2;
         width: 100%;
         height: 100%;
     }
-    #phone{
+
+    #phone {
+        order: 1;
         left: 50%;
         transform: translateX(-50%);
         margin: 0% 0%;
+        height: 550px;
     }
-  }
 
-  @media (max-width: 320px){
-      #phone{
-        margin-left:-50px;
-      }
-  }
+    .socialMedia img{
+        width: 60px;
+        height: 60px;
+    }
+}
 
+@media (max-width: 370px) {
+    #phone {
+        margin-left: -50px;
+    }
+
+    .socialMedia img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+#dot2 {
+    left: 180px;
+}
+
+#dot3 {
+    left: 200px
+}
+
+#phoneBox {
+    top: 410px;
+    left: 160px;
+}
+
+#emailText {
+    position: absolute;
+    top: 265px;
+    left: 150px;
+}
+
+input[type=text],input[type=email] ,textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    box-shadow: inset 8px 8px 4px #000,inset -8px -8px 4px #4d4d4d;
+    background: 0 0;
+    color:white;
+    font-size: larger;
+  }
   
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: larger;
+  }
+  
+  input[type=submit]:hover {
+    background-color: white;
+    color: #000;
+  }
+
+  .emailContainer {
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(135deg,#4d4d4d,#000);
+    margin:2% 10%;
+  }
+
+  ::placeholder{
+      font-size: large;
+  }
+
+
+
