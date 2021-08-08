@@ -30,7 +30,7 @@ function action() {
         //console.log("Whatsapp");
     } else if (slideIndex - 1 === 1) {
         //console.log("Email");
-        window.location.href = "./email.html";
+        window.open ("./email.html",'_blank');
     } else {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (isMobile) {
@@ -39,3 +39,5 @@ function action() {
         //console.log("Phone");
     }
 }
+
+

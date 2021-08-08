@@ -1,13 +1,14 @@
-
 body{
     font-family: '-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';
+    margin: 0;
+    display: block;
 }
 section {
     width: 100%;
 }
 
 .Logo {
-    margin: 0% 5%;
+    margin: 0% 1%;
 }
 
 #banner {
@@ -39,16 +40,17 @@ section {
 
 .bg {
     position: absolute;
-    top: 0px;
-    left: 15px;
+    top:5px;
+    left: 10px;
+    width:345px;
+    border-radius: 20%;
 }
 
 .phone-bg {
-    position: absolute;
+    position: relative;
     top: 5px;
     left: 20px;
     z-index: 1;
-
 }
 
 .logo {
@@ -85,27 +87,6 @@ h1 {
     text-align: left;
     line-height: 150%;
     font-size: x-large;
-}
-
-.prev,
-.next {
-    color: black;
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.next {
-    position: absolute;
-    top: 200px;
-    left: 340px;
-    display: none;
-}
-
-.prev {
-    position: absolute;
-    top: 200px;
-    left: 0px;
-    display: none;
 }
 
 .dot {
@@ -218,10 +199,6 @@ h1 {
         height: 550px;
     }
 
-    .socialMedia img{
-        width: 60px;
-        height: 60px;
-    }
 }
 
 @media (max-width: 370px) {
@@ -254,18 +231,16 @@ h1 {
     left: 150px;
 }
 
-input[type=text],input[type=email] ,textarea {
+input[type=text], input[type=email], textarea {
     width: 100%;
     padding: 12px;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    box-shadow: inset 8px 8px 4px #000,inset -8px -8px 4px #4d4d4d;
-    background: 0 0;
-    color:white;
-    font-size: larger;
+    font-size: 16px;
   }
   
   input[type=submit] {
@@ -273,26 +248,43 @@ input[type=text],input[type=email] ,textarea {
     color: white;
     padding: 12px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 12px;
-    font-size: larger;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   input[type=submit]:hover {
-    background-color: white;
-    color: #000;
-  }
+    background-color: #45a049;
 
+  }
+  
   .emailContainer {
     border-radius: 5px;
+    background-color: #f2f2f2;
     padding: 20px;
-    background: linear-gradient(135deg,#4d4d4d,#000);
-    margin:2% 10%;
   }
 
-  ::placeholder{
-      font-size: large;
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  .next {
+    border-radius: 3px 0 0 3px;
   }
 
+.pointer {
+    position: absolute;
+    top: 540px;
+    left: 90px;
+}
 
+  
 
+  
