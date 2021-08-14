@@ -3,27 +3,24 @@ body{
     margin: 0;
     display: block;
 }
-section {
-    width: 100%;
+
+.-L {
+    margin: 0% 2%;
 }
 
-.Logo {
-    margin: 0% 1%;
-}
-
-#banner {
+#-b{
     background-color: #2A2A2A;
     text-align: left;
     width: 100%;
 }
 
-#company,
+#-C,
 #phone {
     float: left;
     position: relative;
 }
 
-#company {
+#-C {
     height: 100%;
     width: 75%;
 }
@@ -34,11 +31,11 @@ section {
     margin: -130px 0px;
 }
 
-.socialMedia{
+.-SM{
     margin: 0% 1%;
 }
 
-.bg {
+.-bg {
     position: absolute;
     top:5px;
     left: 10px;
@@ -46,29 +43,38 @@ section {
     border-radius: 20%;
 }
 
-.phone-bg {
+.-pb {
     position: relative;
     top: 5px;
     left: 20px;
     z-index: 1;
 }
 
-.logo {
+.-l {
     position: absolute;
     top: 165px;
-    left: 150px;
+    left: 145px;
 }
 
-.text {
+.-t {
     position: absolute;
     top: 265px;
-    left: 110px;
+    left: 100px;
 }
+
+.-WT {
+    position: absolute;
+    top: 265px;
+    left: 105px;
+}
+
+
 
 .box {
     position: absolute;
     top: 410px;
-    left: 90px;
+    left: 83px;
+    z-index: 3;
 }
 
 .group {
@@ -82,36 +88,45 @@ h1 {
     font-size: 50px;
 }
 
-.description {
+.-d {
     margin: 0% 2%;
     text-align: left;
     line-height: 150%;
     font-size: x-large;
 }
 
-.dot {
+.p-i {
+    display: flex;
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    align-items: center;
+    left: 150px;
+    z-index: 3;
+}
+
+.p-i button {
     cursor: pointer;
     height: 10px;
     width: 10px;
-    margin: 0 2px;
-    background-color: #979797;
+    margin: 0 3px;
+    background-color: #626262;
     border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    top: 475px;
-    left: 160px;
-    transition: background-color 0.6s ease;
+    display: inline-block;  
+    transition: background-color 0.3s ease;
+    outline: 0;
 }
+
 
 .active {
-    background-color: white;
+    background-color: white !important;
 }
 
-.fade {
+.-f {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2.5s;
+    -webkit-animation-duration: 1.3s;
     animation-name: fade;
-    animation-duration: 2.5s;
+    animation-duration: 1.3s;
 }
 
 @-webkit-keyframes fade {
@@ -134,71 +149,38 @@ h1 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+    
 
-    #company,
-    #phone {
-        position: relative;
-        vertical-align: middle;
+    .-C {
+        display: flex;
+        flex-direction: column;
     }
 
     #phone {
-        order: 1;
+        width: 100%;
         margin: 0% 0%;
-        height: 550px;
-    }
-
-    .company {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #company {
-        order: 2;
-        width: 100%;
-    }
-
-    .Logo {
-        width: 250px;
-        height: 150px;
-    }
-
-    .socialMedia img{
-        width: 50px;
-        height: 50px;
-    }
-
-
-
-}
-
-@media only screen and (max-width: 1240px) and (min-width: 600px) {
-
-    #company,
-    #phone {
-        float: none;
-        position: relative;
-    }
-
-    .company {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #company {
-        order: 2;
-        width: 100%;
-        height: 100%;
-    }
-
-    #phone {
         order: 1;
         left: 50%;
         transform: translateX(-50%);
         margin: 0% 0%;
-        height: 550px;
     }
 
+    #-C {
+        order: 2;
+        width: 100%;
+        
+    }
+
+    .-L {
+        width: 250px;
+        height: 150px;
+    }
+
+    .-SM img{
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -206,7 +188,7 @@ h1 {
         margin-left: -50px;
     }
 
-    .socialMedia img{
+    .-SM img{
         width: 40px;
         height: 40px;
     }
@@ -222,7 +204,7 @@ h1 {
 
 #phoneBox {
     top: 410px;
-    left: 160px;
+    left: 155px;
 }
 
 #emailText {
@@ -261,29 +243,20 @@ input[type=text], input[type=email], textarea {
 
   }
   
-  .emailContainer {
+  .-ec {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    max-width: 700px;
+    display: block;
+    margin: auto;
   }
 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    color: black;
-    font-weight: bold;
-    font-size: 50px;
+  .-e>div{
+        width: 100%;
   }
   
-  .next {
-    border-radius: 3px 0 0 3px;
-  }
 
-.pointer {
-    position: absolute;
-    top: 540px;
-    left: 90px;
-}
 
   
 

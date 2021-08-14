@@ -1,10 +1,11 @@
-var slideIndex = 0;
+var slideIndex = 0,time;
 showSlides();
 
 function showSlides() {
-    var slides = document.getElementsByClassName("slide");
-    var dots = document.getElementsByClassName("dot");
-    for (var i = 0; i < slides.length; i++) {
+    let slides = document.getElementsByClassName("-s");
+    let dots = document.getElementsByClassName("dot");
+
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     //console.log(slides);
@@ -15,29 +16,53 @@ function showSlides() {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("active", "");
     }
+
     slides[slideIndex].style.display = "block";
     dots[slideIndex].className += " active";
     slideIndex++;
-    setTimeout(showSlides, 5000);
+    time = setTimeout(showSlides, 4000);
 }
 
-function action() {
-    if (slideIndex - 1 === 0) {
-        var number = "+918508663203"
-        var Message = "Hi"
-        var url = 'https://api.whatsapp.com/send?phone=' + number + '&text=%20' + Message;
-        window.open(url, '_blank')
-        //console.log("Whatsapp");
-    } else if (slideIndex - 1 === 1) {
-        //console.log("Email");
-        window.open ("./email.html",'_blank');
-    } else {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-            document.location.href = "tel:+918508663203";
+
+
+const actionIndicator = [...document.querySelectorAll('.box')]
+
+actionIndicator.forEach((item, i) => {
+    console.log(item);
+    item.addEventListener('click', () => {
+        console.log(i);
+        if (i === 0) {
+            let number = "+918508663203"
+            let Message = "Hi"
+            let url = 'https://api.whatsapp.com/send?phone=' + number + '&text=%20' + Message;
+            window.open(url, '_blank')
+            //console.log("Whatsapp");
+        } else if (i === 1) {
+            //console.log("Email");
+            window.open("./email.html", '_blank');
+        } else {
+            let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                document.location.href = "tel:+918508663203";
+            }
+            //console.log("Phone");
         }
-        //console.log("Phone");
-    }
-}
+    })
+});
 
 
+
+let currentCard = 0;
+const indicators = [...document.querySelectorAll('.p-i button')];
+
+indicators.forEach((item, i) => {
+    //console.log(item);
+    item.addEventListener('click', () => {
+        item.classList.add('active');
+        indicators[currentCard].classList.remove('active');
+        currentCard = i;
+        slideIndex = i;
+        clearTimeout(time);
+        showSlides();
+    })
+})
